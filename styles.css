@@ -1,0 +1,1242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Heebo&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --OCC_offblue: #00527a;
+  --OCC_lightblue: #ADCAD6;
+  --OCC_blue: #006599;
+  --OCC_black: #000;
+  --OCC_white: #fff;
+  --OCC_highlight: #bde9fc;
+  --OCC_font_header: 'Bangers', cursive;
+  --OCC_font_desc: 'Heebo', sans-serif;
+  /* --OCC_welcome_font: ; */
+}
+
+
+
+/* ****************************************************************************************  */
+/* GENERAL ELEMENTS */
+/* ****************************************************************************************  */
+body {
+  margin: 0rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: url("/assets/mtg-dracula-2600.jpeg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, var(--OCC_white), transparent);  
+  margin-top: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.section-heading {
+  text-shadow: 0.05em 0.05em 0 var(--OCC_blue),
+  0.075em 0.075em 0 var(--OCC_lightblue);
+  text-transform: uppercase;
+  font-family: var(--OCC_font_header);
+  color: var(--OCC_white);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* animations for section headers */
+h2 {
+  position: relative;
+  font-size: 3.5rem;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,  #0008);
+  line-height: 0.70em;
+  outline: none;
+  animation: animate 5s linear infinite;
+  padding-top: 1rem;
+}
+@keyframes animate
+{
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+  {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+{
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4,
+      0 0 20px #03bcf4,
+      0 0 40px #03bcf4,
+      0 0 80px #03bcf4,
+      0 0 160px #03bcf4;
+
+  }
+}
+
+
+/* ************************** */
+/* Iphone X */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+  
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3) { 
+
+    h2 {
+      font-size: 3.2rem;
+    }
+  }
+  
+
+  @media only screen 
+  and (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) { 
+    
+    h2 {
+      font-size: 2.4rem;
+    }
+  }
+
+
+
+
+/* ****************************************************************************************  */
+/* NAVBAR */
+/* ****************************************************************************************  */
+.header{
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--OCC_blue);
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--OCC_white);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--OCC_font_header);
+  text-shadow: 2px 2px #000;
+  color: var(--OCC_white);
+}
+
+.nav-link:hover{
+  color: var(--OCC_highlight);
+}
+
+.nav-logo {
+  height: auto;
+  max-width: 10rem;
+}
+
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: var(--OCC_blue);
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-logo {
+    max-width: 40%;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item {
+      margin: 2.5rem 0;
+  }
+
+  .nav-link{
+    padding: 1rem 6rem 1rem 6rem;
+    border-bottom: 1px solid white;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+}
+
+
+
+/* ****************************************************************************************  */
+/* HERO */
+/* ****************************************************************************************  */
+.hero {
+  height: 100vh;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.welcome {
+  font-size: 7rem;
+  font-family: var(--OCC_font_header);
+  color: var(--OCC_white);
+  letter-spacing: .15em;
+  text-shadow: 6px 6px var(--OCC_black);
+}
+
+.welcome-info {
+  font-size: 2.5rem;
+  font-family: var(--OCC_font_header);
+  color: var(--OCC_white);
+  text-shadow: 4px 4px var(--OCC_black);
+  letter-spacing: .18rem;
+}
+
+@media(max-width:768px) {
+  .welcome {
+    font-size: 4rem;
+  }
+}
+
+
+
+/* ****************************************************************************************  */
+/* ABOUT US */
+/* ****************************************************************************************  */
+.about {
+  width: 100vw;
+  height: 105vh;
+  display: block;
+  background-color: var(--OCC_blue);
+}
+
+.about-title::after {
+  content: "";
+  border-bottom: solid 1px;
+  width: 100%;
+  position: relative;
+}
+
+.about-desc {
+  text-align: center;
+  padding: 1rem 6rem 1rem 6rem;
+  color: var(--OCC_white);
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--OCC_font_desc);
+  text-shadow: 2px 2px #000;
+}
+
+.about-me-photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me-links {
+  margin-top: 0.8rem;
+}
+
+.about-me-photo {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  max-width: 22.5rem;
+  height: auto;
+  border-radius: 50%;
+  border: 0.5rem solid var(--OCC_white);
+  
+}
+
+.about-hours-container {
+  margin: 0 auto;
+  width: 22.5vw;
+  height: auto;
+  background-color: var(--OCC_blue);
+  border: 0.25rem solid var(--OCC_white);
+  border-radius: 1rem;
+}
+
+.about-hours {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000;
+  font-size: 1.25rem;
+  font-family: var(--OCC_font_desc);
+  color: var(--OCC_white);
+  line-height: 1.75rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+/* ************************** */
+/* Iphone X of About me*/
+/* Iphone 6/7/8 */
+/* Iphone 6/7/8 Plus */
+/* Common traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+  
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) { 
+
+  .about {
+    height: 115vh;
+  }
+
+  .about-me-photo {
+    width: 18rem;
+  }
+
+  .about-desc {
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .about-hours-container {
+    width: 90vw;
+  }
+
+}
+
+/* ************************** */
+/* Iphone 6/7/8 of about me*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) { 
+
+  .about {
+    height: 140vh;
+  }
+}
+/* ************************** */
+/* Iphone 6/7/8 plus of about me*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 736px) 
+and (-webkit-device-pixel-ratio : 3) { 
+
+  .about {
+    height: 120vh;
+  }
+}
+
+
+/* ************************** */
+/* Iphone 5/SE of about me*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) {
+   
+    .about {
+      height: 170vh;
+    }
+  }
+
+
+/* ****************************************************************************************  */
+/* OUR PRODUCTS */
+/* ****************************************************************************************  */
+.our-products {
+  height: 150vh;
+  background-color: var(--OCC_lightblue);
+  display: block;
+  margin: 0 auto; 
+}
+
+.products-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-header {
+  text-align: center;
+  font-family: var(--OCC_font_desc);
+  padding: 1rem 6rem 2rem 6rem;
+  color: var(--OCC_white);
+  text-shadow: 2px 2px #000;
+}
+
+/* Boxes that hold data */
+.product-cards,
+.product-mini,
+.product-comics {
+  position: relative;
+  overflow: visible;
+  text-align: center;
+  width: 50vw;
+  height: 35vh;
+  border-radius: 1em;
+  padding-top: 1rem;
+  margin: 0rem 1rem 3rem 1rem;
+  background: radial-gradient(var(--clr-inner, var(--OCC_blue)) 88%, var(--clr-outer, var(--OCC_white)));
+  border: 0.25rem solid var(--OCC_white);
+}
+
+/* Title for types of products */
+.product-title-cards,
+.product-title-mini,
+.product-title-comics {
+  font-size: clamp(2rem, calc(5vw + 1rem), 5.5rem);
+  font-family: var(--OCC_font_header);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--OCC_white);
+  text-shadow: 2px 2px #000;
+}
+
+.product-title-cards,
+.product-title-comics {
+  padding-left: 50%;
+}
+
+.product-title-mini {
+  padding-right: 40%;
+}
+
+/* Description of what the products are */
+.product-description-cards,
+.product-description-comics {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 50%;
+  font-size: 1.15rem;
+  font-family: var(--OCC_font_desc);
+  color: var(--OCC_white);
+}
+
+.product-description-mini {
+  padding-top: 1rem;
+  padding-right: 50%;
+  padding-left: 1rem;
+  font-size: 1.15rem;
+  font-family: var(--OCC_font_desc);
+  color: var(--OCC_white);
+}
+
+/* Images for products */
+.product-image-cards,
+.product-image-mini,
+.product-image-comics {
+  position: absolute;
+  height: auto;
+  max-width: 15rem;
+  max-height: 16rem;
+  display: block;
+  float: left;
+}
+
+.product-image-cards,
+.product-image-comics {
+  margin-left: 2rem;
+}
+
+.product-image-cards {
+  border: 1px solid black;
+  border-radius: 15px; 
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.product-image-mini {
+  right: 0;
+  margin-right: 2.5rem;
+  max-height: 16rem;
+}
+
+/* ************************** */
+/* Iphone X of Our Products*/
+/* Iphone 6/7/8 */
+/* Iphone 6/7/8 Plus */
+/* Common traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+  
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3),
+  (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) { 
+    .our-products {
+      height: 255vh;
+    }
+  
+    .product-header {
+      padding: 0.5rem 1rem 1rem 1rem;
+    }
+  
+    .product-cards,
+    .product-mini,
+    .product-comics {
+      width: 90vw;
+      height: 65vh;
+    }
+
+    .product-image-cards,
+    .product-image-mini,
+    .product-image-comics {
+      display: block;
+      position:relative;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 20rem;
+      width: 60%;
+      float: none;
+    }
+  
+    .product-title-cards,
+    .product-title-mini,
+    .product-title-comics {
+      padding: 1rem 0rem 1rem 0rem;
+    }
+  
+    .product-description-cards,
+    .product-description-mini,
+    .product-description-comics {
+      padding: 0rem 1rem 0rem 1rem;
+    }
+  }
+
+/* ************************** */
+/* Iphone 6/7/8 of Our Products*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  .our-products {
+    height: 310vh;
+  }
+
+  .product-cards,
+  .product-mini,
+  .product-comics {
+    height: 80vh;
+  }
+}
+
+
+/* ************************** */
+/* Iphone 6/7/8 plus of Our Products*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 736px) 
+and (-webkit-device-pixel-ratio : 3) { 
+  .our-products {
+    height: 300vh;
+  }
+
+  .product-cards,
+  .product-mini,
+  .product-comics {
+    height: 80vh;
+  }
+}
+
+
+/* ************************** */
+/* Iphone 5/SE of Our Products*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) {
+   
+    .our-products {
+      height: 360vh;
+    }
+  
+    .product-cards,
+    .product-mini,
+    .product-comics {
+      height: 90vh;
+    }
+  }
+
+
+
+/* **************************************************************************************** */
+/* Gabis Kids */
+/* **************************************************************************************** */
+.gabis-kids {
+  background-color: var(--OCC_blue);
+  height: 80vh;
+}
+
+.gabis-kids-header {
+  display: block;
+  padding: 1rem 1rem 1rem 1rem;
+  color: var(--OCC_white);
+  text-align: center;
+  text-shadow: 2px 2px #000;
+  font-family: var(--OCC_font_desc);
+}
+
+.complete-logo-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.logo-desc-container {
+  display: flex;
+  flex: 50%;
+  margin-left: 12rem;
+}
+
+.logo-social-container {
+  display: flex;
+  flex: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12rem;
+}
+
+.gabis-kids-logo {
+  border-radius: 50%;
+  border: 0.5rem solid var(--OCC_offblue);
+}
+
+.logo-desc {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  color: var(--OCC_white);
+  font-family: var(--OCC_font_desc);
+  font-size: 1.25rem;
+  text-shadow: 2px 2px var(--OCC_black);
+  text-align: center;
+}
+
+#gabis-kids-social-link {
+  display: block;
+  margin: 0 auto;
+  width:3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+#gabis-kids-social-link:hover {
+  color: #FE7F2D;
+}
+
+/* ************************** */
+/* Iphone X of Gabis kids*/
+/* Iphone 6/7/8 */
+/* Iphone 6/7/8 Plus */
+/* Common traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) { 
+
+    .gabis-kids {
+      height: 115vh;
+    }
+    .complete-logo-container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .logo-social-container {
+      margin-right: 0rem;
+    }
+  
+    .logo-desc-container {
+      flex-direction: column;
+      margin-left: 0rem;
+      margin-top: 0.75rem;
+    }
+  
+    .gabis-kids-logo {
+      width: 18rem;
+      margin: 0 auto;
+    }
+  
+    .logo-desc {
+      padding-left: 0rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 0rem 1rem 0rem 1rem;
+    }
+  
+    #gabis-kids-social-link {
+      display: block;
+    }
+
+}
+
+
+/* ************************** */
+/* Iphone 6/7/8 of Our gabis kids*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) { 
+
+  .gabis-kids {
+    height: 140vh;
+  }
+}
+
+/* ************************** */
+/* Iphone 6/7/8 plus of gabis kids*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 736px) 
+and (-webkit-device-pixel-ratio : 3) { 
+  .gabis-kids {
+    height: 115vh;
+  }
+}
+
+/* ************************** */
+/* Iphone 5/SE of gabis kids*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) {
+   
+    .gabis-kids {
+      height: 170vh;
+    }
+  }
+
+
+
+
+
+/* ****************************************************************************************  */
+/* CONTACT US */
+/* ****************************************************************************************  */
+
+/* whole section properties */
+section#contact {
+  height: 100vh; 
+}
+
+section h1.section-subheading {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+  color: var(--OCC_white);
+  font-family: var(--OCC_font_desc);
+  text-shadow: 2px 2px #000;
+}
+
+
+.contact-form-container {
+  display: flex;
+}
+
+
+/* group for submit form */
+.contact-form {
+  margin: 0 auto;
+  margin-bottom: 1rem; 
+}
+
+.form-control {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  margin: 1.2rem 0rem 1.2rem 0rem;
+  height: auto;
+  width: 30rem;
+  font-family: var(--OCC_font_desc);
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-control#message {
+  height: 15rem;
+}
+
+/* Button for contact */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  padding: 1.35rem 1.8rem 1.35rem 1.8rem;
+  font-size: 1rem;
+  font-family: var(--OCC_font_desc);
+  text-transform: uppercase;
+  background-color: var(--OCC_offblue);
+  color: #d3d3d3;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: var(--OCC_blue);
+  color: var(--OCC_white);
+  transition: ease-in-out 0.4s;
+}
+
+/* container for info about phone and address */
+.info-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.phone-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--OCC_white);
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.25rem solid var(--OCC_blue);
+}
+
+.address-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  background-color: var(--OCC_white);
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.25rem solid var(--OCC_blue);
+}
+
+.fa#phone,
+.fa#pin {
+  display: flex;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 1/4;
+  margin: 0rem 0rem 0rem 1.2rem;
+  font-size: 2.6rem;
+}
+
+.info-header-text {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-family: var(--OCC_font_header);
+  line-height: 1rem;
+  grid-column: 2/6;
+  grid-row: 1;
+}
+
+.info-container-text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: var(--OCC_font_desc);
+  grid-column: 2/6;
+  grid-row: 2;
+}
+
+/* ************************** */
+/* Iphone X of Contact Us*/
+/* Iphone 6/7/8 */
+/* Iphone 6/7/8 Plus */
+/* Common traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) { 
+
+    section#contact {
+      height: 115vh;
+    }
+  
+    .info-container {
+      display: block;
+      margin: 3rem 1rem 1rem 1rem;
+    }
+    .phone-container,
+    .address-container {
+      width: 90vw;
+      height: 10vh;
+      margin: 0rem 0rem 1rem 0rem;
+      line-height: 1.25rem;
+    }
+      
+    .info-container-text {
+      font-size: 1.25rem;
+    }
+  
+    .form-control {
+      width: 90vw;
+    }
+  
+    .grid-footer-container {
+      display: block;
+    }
+  }
+
+/* ************************** */
+/* Iphone 6/7/8 of Contact us*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  section#contact {
+    height: 140vh;
+  }
+
+  .phone-container,
+  .address-container {
+      width: 90vw;
+      height: 11vh;
+      margin: 1.5rem 0rem 1rem 0rem;
+  }
+  
+  .info-container-text {
+    font-size: 1rem;
+  }
+
+}
+
+/* ************************** */
+/* Iphone 6/7/8 plus of Contact us*/
+/* Different traits */
+/* ************************** */
+@media only screen 
+and (device-width : 414px) 
+and (device-height : 736px) 
+and (-webkit-device-pixel-ratio : 3) { 
+
+  section#contact {
+    height: 125vh;
+  }
+}
+
+/* ************************** */
+/* Iphone 5/SE of Contct us*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2) {
+   
+    section#contact {
+      height: 160vh;
+    }
+
+    .phone-container,
+    .address-container {
+        width: 90vw;
+        height: 12.5vh;
+        margin: 1.5rem 0rem 1rem 0rem;
+    }
+    
+    .info-container-text {
+      font-size: 1rem;
+    }
+  }
+
+
+
+
+/* ****************************************************************************************  */
+/* FOOTER */
+/* ****************************************************************************************  */
+footer {
+  display: block;
+  width: 100vw;
+  padding: 1rem 0;
+  background-color: var(--OCC_blue);
+  text-align: center;
+}
+
+.grid-footer-container {
+  display: block;
+}
+
+.copyright {
+  color: var(--OCC_white);
+  font-size: 1.2rem;
+  font-family: var(--OCC_font_desc);
+  text-shadow: 2px 2px #000;
+}
+
+.fa {
+  background-color: white;
+  border-radius: 20px;
+  color: var(--OCC_blue);
+}
+
+.fa-stack {
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.fa-stack-1x:hover { 
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  color: #FE7F2D;
+}
+
+/* ************************** */
+/* Iphone X of Footer*/
+/* Iphone 6/7/8 */
+/* Iphone 6/7/8 Plus */
+/* Common traits */
+/* ************************** */
+@media only screen 
+  and (device-width : 375px) 
+  and (device-height : 812px) 
+  and (-webkit-device-pixel-ratio : 3),
+
+  (device-width : 375px) 
+  and (device-height : 667px) 
+  and (-webkit-device-pixel-ratio : 2),
+
+  (device-width : 414px) 
+  and (device-height : 736px) 
+  and (-webkit-device-pixel-ratio : 3),
+  
+  (device-width : 320px) 
+  and (device-height : 568px) 
+  and (-webkit-device-pixel-ratio : 2){ 
+
+    footer {
+      height: 20vh;
+    }
+  
+    .grid-footer-container {
+      display: block;
+    }
+
+    .copyright {
+      padding-top: 1rem;
+    }
+
+  }
+
+/* ************************** */
+/* Iphone 5/SE of footer*/
+/* Different Traits */
+/* ************************** */
+@media only screen 
+and (device-width : 320px) 
+and (device-height : 568px) 
+and (-webkit-device-pixel-ratio : 2) {
+ 
+  .copyright {
+    padding-top: 0.5rem;
+  }
+}
+
+
+/* ****************************************************************************************  */
+/* OTHER */
+/* ****************************************************************************************  */
+
+.set-title {
+  color: rgb(190, 0, 0);
+}
+
+@media only screen and (max-width:749px) {
+  .body {
+    background-attachment: inherit;
+  }
+}
+
+.fade {
+  margin: 50px;
+  padding: 50px;
+  background-color: lightgreen;
+  transition: opacity 0.7s ease-in;
+}
+
+.fadeOut { opacity: 0; }
+.fadeIn { opacity: 1; }
