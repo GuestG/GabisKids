@@ -32,11 +32,12 @@ body {
   margin: 0rem;
   line-height: 1.6;
   overflow-x: hidden;
-  background: url("/assets/mtg-dracula.jpeg") no-repeat;
+  background: url("./assets/mtg-dracula-2600.JPEG");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  
 }
 
 img {
@@ -138,6 +139,14 @@ h2 {
     h2 {
       font-size: 3.2rem;
     }
+
+    body {
+      background: url("./assets/mtgvow_dracula_iphone.jpeg") no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
   
 
@@ -148,6 +157,14 @@ h2 {
     
     h2 {
       font-size: 2.4rem;
+    }
+
+    body {
+      background: url("./assets/mtgvow_dracula_iphone.jpeg") no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
