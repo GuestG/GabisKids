@@ -32,7 +32,9 @@ body {
   margin: 0rem;
   line-height: 1.6;
   overflow-x: hidden;
-  background: url("./assets/mtg-dracula-2600.jpeg");
+  /* CHANGE HERE BELOW TO CHANGE BACKGROUND IMAGE, 
+  BE SURE TO GET MOBILE VERSION OF IMAGE.*/
+  background: url("./assets/mtg-dracula.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -811,7 +813,7 @@ and (-webkit-device-pixel-ratio : 3) {
 .logo-desc {
   display: flex;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 0rem 0rem 2rem 0rem;
   color: var(--OCC_white);
   font-family: var(--OCC_font_desc);
   font-size: 1.25rem;
