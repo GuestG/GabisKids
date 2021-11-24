@@ -32,9 +32,9 @@ body {
   margin: 0rem;
   line-height: 1.6;
   overflow-x: hidden;
-  /* CHANGE HERE BELOW TO CHANGE BACKGROUND IMAGE, 
+  /* CHANGE HERE BELOW TO CHANGE BACKGROUND IMAGE, 2600 version doesnt work on github pages. 
   BE SURE TO GET MOBILE VERSION OF IMAGE.*/
-  background: url("./assets/mtg-dracula.jpeg");
+  background: url("./assets/mtg-dracula-2600.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,7 +232,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 3rem;
   background-color: var(--OCC_blue);
 }
 
@@ -257,7 +257,7 @@ h2 {
 }
 
 .nav-item {
-  margin-left: 5rem;
+  margin-left: 4.5rem;
 }
 
 .nav-link{
@@ -291,6 +291,10 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
   .nav-menu {
       position: fixed;
       left: -100%;
