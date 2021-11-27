@@ -501,10 +501,6 @@ a:hover:after {
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) { 
 
-  .about {
-    height: 115vh;
-  }
-
   .about-me-photo {
     width: 18rem;
   }
@@ -530,9 +526,7 @@ and (device-width : 375px)
 and (device-height : 667px) 
 and (-webkit-device-pixel-ratio : 2) { 
 
-  .about {
-    height: 140vh;
-  }
+
 }
 
 /* ************************** */
@@ -544,9 +538,7 @@ and (device-width : 414px)
 and (device-height : 736px) 
 and (-webkit-device-pixel-ratio : 3) { 
 
-  .about {
-    height: 120vh;
-  }
+
 }
 
 /* ************************** */
@@ -558,9 +550,7 @@ and (-webkit-device-pixel-ratio : 3) {
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) {
    
-    .about {
-      height: 170vh;
-    }
+ 
   }
 
 
@@ -900,9 +890,6 @@ and (-webkit-device-pixel-ratio : 3) {
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) { 
 
-    .gabis-kids {
-      height: 115vh;
-    }
     .complete-logo-container {
       display: flex;
       flex-direction: column-reverse;
@@ -941,42 +928,36 @@ and (-webkit-device-pixel-ratio : 3) {
 /* Iphone 6/7/8 of Our gabis kids*/
 /* Different traits */
 /* ************************** */
-@media only screen 
+/* @media only screen 
 and (device-width : 375px) 
 and (device-height : 667px) 
 and (-webkit-device-pixel-ratio : 2) { 
 
-  .gabis-kids {
-    height: 140vh;
-  }
-}
+
+} */
 
 /* ************************** */
 /* Iphone 6/7/8 plus of gabis kids*/
 /* Different traits */
 /* ************************** */
-@media only screen 
+/* @media only screen 
 and (device-width : 414px) 
 and (device-height : 736px) 
 and (-webkit-device-pixel-ratio : 3) { 
-  .gabis-kids {
-    height: 115vh;
-  }
-}
+ 
+} */
 
 /* ************************** */
 /* Iphone 5/SE of gabis kids*/
 /* Different Traits */
 /* ************************** */
-@media only screen 
+/* @media only screen 
   and (device-width : 320px) 
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) {
    
-    .gabis-kids {
-      height: 170vh;
-    }
-  }
+
+  } */
 
 
 
@@ -1249,7 +1230,7 @@ footer {
   display: block;
   width: 100%;
   height: auto;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-color: var(--OCC_blue);
   text-align: center;
   border: 0.25rem solid var(--OCC_white);
@@ -1338,7 +1319,6 @@ and (-webkit-device-pixel-ratio : 2) {
 /* ****************************************************************************************  */
 /* OTHER */
 /* ****************************************************************************************  */
-
 
 .reveal {
   position: relative;

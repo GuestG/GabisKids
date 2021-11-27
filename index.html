@@ -214,7 +214,7 @@
                 </h1>
                 <!-- DONT FORGET TO HAVE THEM SET UP FORM SUBMIT at olympiccardsandcomics@gmail.com -->
                 <div class="contact-form-container">
-                    <form class="contact-form" method="POST" novalidate=""
+                    <form class="contact-form" id="form" method="POST" 
                         action="https://formsubmit.co/e231169454c6ef1a337769280ec551af">
                         <!-- honeypot -->
                         <input type="text" name="_honey" style="display: none;">
@@ -223,17 +223,24 @@
                         <input type="hidden" name="_captcha" value="false">
 
                         <input type="hidden" name="_next" value="https://olympiccardsandcomics.com/">
-
+                        <!-- <div> -->
                         <input name="name" id="name" type="text" class="form-control" placeholder="Your Name *" required
                             data-validation-required-message="Please enter your name.">
-
-                        <input name="email" id="email" type="text" class="form-control" placeholder="Your Email *"
-                            required data-validation-required-message="Please enter your email address.">
-
+                            <!-- <small>Error message</small>
+                        </div>
+                        <div> -->
+                        <input name="email" id="email" type="text"
+                        pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
+                        class="form-control" placeholder="Your Email *"
+                        required data-validation-required-message="Please enter your email address.">
+                            <!-- <small>Error message</small>
+                        </div>
+                        <div> -->
                         <textarea class="form-control" id="message" name="message" placeholder="Your Message *" required
                             data-validation-required-message="Please enter a message."></textarea>
-
-                        <button type="submit" class="submit-button">Send Message</button>
+                            <!-- <small>Error message</small>
+                        </div> -->
+                        <button type="submit" id="submit" class="submit-button" value="submit">Send Message</button>
 
                     </form>
                 </div>
