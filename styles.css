@@ -13,7 +13,7 @@
 
 :root {
   --OCC_offblue: #00527a;
-  --OCC_lightblue: #ADCAD6;
+  --OCC_lightblue: #c4e9f8;
   --OCC_blue: #006599;
   --OCC_black: #000;
   --OCC_white: #fff;
@@ -225,7 +225,8 @@ h2 {
 /* NAVBAR */
 /* ****************************************************************************************  */
 .header{
-  border-bottom: 1px solid #E2E8F0;
+  border-bottom: 0.25rem solid var(--OCC_white);
+  border-radius: 0.25rem;
 }
 
 .navbar {
@@ -560,7 +561,7 @@ and (-webkit-device-pixel-ratio : 3) {
 .our-products {
   width: 100%;
   height: auto;
-  background-color: var(--OCC_lightblue);
+  background-color: var(--OCC_blue);
   display: block;
   margin: 0 auto; 
   border: 0.25rem solid var(--OCC_white);
@@ -595,7 +596,7 @@ and (-webkit-device-pixel-ratio : 3) {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   margin: 0rem 1rem 3rem 1rem;
-  background: radial-gradient(var(--clr-inner, var(--OCC_blue)) 88%, var(--clr-outer, var(--OCC_white)));
+  /* background: radial-gradient(var(--clr-inner, var(--OCC_blue)) 88%, var(--clr-outer, var(--OCC_white))); */
   border: 0.25rem solid var(--OCC_white);
 }
 
@@ -1028,15 +1029,16 @@ section h1.section-subheading {
   border-radius: 0.5rem;
   padding: 1.35rem 1.8rem 1.35rem 1.8rem;
   font-size: 1rem;
+  font-family: bolder;
   font-family: var(--OCC_font_desc);
   text-transform: uppercase;
-  background-color: var(--OCC_offblue);
-  color: #d3d3d3;
+  text-shadow: 1px 1px #000;
+  background-color: var(--OCC_blue);
+  color: rgb(238, 238, 238);
 }
 
 .submit-button:hover {
   cursor: pointer;
-  background-color: var(--OCC_blue);
   color: var(--OCC_white);
   transition: ease-in-out 0.4s;
 }
@@ -1054,11 +1056,11 @@ section h1.section-subheading {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(6, 1fr);
-  background-color: var(--OCC_white);
+  background-color: var(--OCC_blue);
   padding: 0.5rem 0rem 0.5rem 0rem;
   margin-right: 0.5rem;
   border-radius: 0.5rem;
-  border: 0.25rem solid var(--OCC_blue);
+  border: 0.25rem solid var(--OCC_white);
 }
 
 .address-container {
@@ -1066,17 +1068,19 @@ section h1.section-subheading {
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(6, 1fr);
-  background-color: var(--OCC_white);
+  background-color: var(--OCC_blue);
   padding: 0.5rem 0rem 0.5rem 0rem;
   margin-left: 0.5rem;
   border-radius: 0.5rem;
-  border: 0.25rem solid var(--OCC_blue);
+  border: 0.25rem solid var(--OCC_white);
 }
 
 .fa#phone,
 .fa#pin {
   display: flex;
   justify-content: center;
+  background-color: var(--OCC_blue);
+  color: var(--OCC_white);
   grid-column: 1;
   grid-row: 1/4;
   margin: 0rem 0rem 0rem 1.2rem;
@@ -1089,6 +1093,8 @@ section h1.section-subheading {
   text-transform: uppercase;
   font-size: 1.15rem;
   font-family: var(--OCC_font_header);
+  text-shadow: 2px 2px #000;
+  color: var(--OCC_white);
   line-height: 1rem;
   grid-column: 2/6;
   grid-row: 1;
@@ -1100,6 +1106,8 @@ section h1.section-subheading {
   text-align: center;
   font-size: 1.25rem;
   font-family: var(--OCC_font_desc);
+  text-shadow: 2px 2px #000;
+  color: var(--OCC_white);
   grid-column: 2/6;
   grid-row: 2;
 }
@@ -1233,7 +1241,7 @@ footer {
   padding: 0.5rem 0;
   background-color: var(--OCC_blue);
   text-align: center;
-  border: 0.25rem solid var(--OCC_white);
+  border-top: 0.25rem solid var(--OCC_white);
   border-radius: 0.25rem;
 }
 
@@ -1296,7 +1304,7 @@ footer {
     }
 
     .copyright {
-      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
   }
@@ -1309,6 +1317,10 @@ footer {
 and (device-width : 320px) 
 and (device-height : 568px) 
 and (-webkit-device-pixel-ratio : 2) {
+
+  footer {
+    height: auto;
+  }
  
   .copyright {
     padding-top: 0.5rem;
