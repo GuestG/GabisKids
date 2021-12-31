@@ -34,7 +34,7 @@ body {
   overflow-x: hidden;
   /* CHANGE HERE BELOW TO CHANGE BACKGROUND IMAGE, 2600 version doesnt work on github pages. 
   BE SURE TO GET MOBILE VERSION OF IMAGE.*/
-  background: url("./assets/mtg-dracula-2600.jpeg");
+  background: url("./assets/gabisKidsHero.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,7 +131,7 @@ h2 {
   line-height: 0.70em;
   outline: none;
   animation: animate 5s linear infinite;
-  padding-top: 1rem;
+  padding-top: 1.6rem;
 }
 @keyframes animate
 {
@@ -177,18 +177,21 @@ h2 {
   and (-webkit-device-pixel-ratio : 3) { 
 
     h2 {
-      font-size: 3.2rem;
+      font-size: 2.8rem;
     }
 
     body {
-      background: url("./assets/mtgvow_dracula_iphone.jpeg") no-repeat;
+      background: url("./assets/helpers.jpeg") no-repeat;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
-  
+
+/* ************************** */
+/* Iphone 5 */
+/* ************************** */
 
   @media only screen 
   and (device-width : 320px) 
@@ -196,11 +199,11 @@ h2 {
   and (-webkit-device-pixel-ratio : 2) { 
     
     h2 {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
 
     body {
-      background: url("./assets/mtgvow_dracula_iphone.jpeg") no-repeat;
+      background: url("./assets/helpers.jpeg") no-repeat;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -211,8 +214,7 @@ h2 {
   
   @media screen and (width: 996px) {
     .body {
-      background: url("./assets/mtgvow_dracula_iphone.jpeg") no-repeat;
-      background-attachment: fixed;
+      background: url("./assets/helpers.jpeg") no-repeat;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -233,7 +235,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 0rem 3rem;
   background-color: var(--OCC_blue);
 }
 
@@ -259,7 +261,8 @@ h2 {
 }
 
 .nav-item {
-  margin-left: 4.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .nav-link {
@@ -267,6 +270,7 @@ h2 {
   font-size: 1.6rem;
   font-weight: 500;
   font-family: var(--OCC_font_header);
+  letter-spacing: .10rem;
   text-shadow: 2px 2px #000;
   color: var(--OCC_white);
 }
@@ -287,6 +291,36 @@ h2 {
   width: 0;
 }
 
+.external {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 500;
+  font-family: var(--OCC_font_header);
+  letter-spacing: .10rem;
+  text-shadow: 2px 2px #000;
+  color: var(--OCC_white);
+}
+
+.external:hover {
+  display: inline-block;
+  position: relative;
+}
+
+.external:after {    
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#english {
+  display: none;
+}
+
 a:hover:after { 
   width: 100%; 
   left: 0; 
@@ -294,7 +328,7 @@ a:hover:after {
 
 .nav-logo {
   height: auto;
-  max-width: 10rem;
+  max-width: 4.5rem;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -311,7 +345,7 @@ a:hover:after {
 
 @media only screen and (max-width: 768px) {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0rem 1.5rem;
   }
 
   .nav-menu {
@@ -329,7 +363,7 @@ a:hover:after {
   }
 
   .nav-logo {
-    max-width: 40%;
+    max-width: 4.5rem;
   }
 
   .nav-menu.active {
@@ -337,11 +371,11 @@ a:hover:after {
   }
 
   .nav-item {
-      margin: 2.5rem 0;
+      margin: 2rem 0;
   }
 
   .nav-link{
-    padding: 1rem 6rem 1rem 6rem;
+    padding: 1rem 3rem 1rem 3rem;
     border-bottom: 1px solid white;
   }
   .nav-link:hover {
@@ -383,19 +417,57 @@ a:hover:after {
 }
 
 .welcome {
-  font-size: 7rem;
+  font-size: 5.5rem;
   font-family: var(--OCC_font_header);
   color: var(--OCC_white);
   letter-spacing: .15em;
-  text-shadow: 6px 6px var(--OCC_black);
+  text-shadow:    -4px -4px 0 var(--OCC_blue),
+  4px -4px 0 var(--OCC_blue),
+  -4px 4px 0 var(--OCC_blue),
+  4px 4px 0 var(--OCC_blue);
 }
+
+.explaination {
+  font-size: 2.5rem;
+  font-family: var(--OCC_font_header);
+  color: var(--OCC_white);
+  letter-spacing: .18rem;
+  padding-bottom: 1.25rem;
+  text-shadow:    -2px -2px 0 var(--OCC_blue),
+  2px -2px 0 var(--OCC_blue),
+  -2px 2px 0 var(--OCC_blue),
+  2px 2px 0 var(--OCC_blue);
+}
+
 
 .welcome-info {
   font-size: 2.5rem;
   font-family: var(--OCC_font_header);
   color: var(--OCC_white);
-  text-shadow: 4px 4px var(--OCC_black);
+  text-shadow: 5px 5px var(--OCC_black);
   letter-spacing: .18rem;
+}
+
+.donate-button {
+  padding: 0.65rem 2rem 0.65rem 2rem;
+  letter-spacing: .08em;
+  font-size: 2.4rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  background-color: var(--OCC_blue);
+  font-weight: bolder;
+  font-family: var(--OCC_font_desc);
+  text-transform: uppercase;
+  /* text-shadow: 2.5px 2.5px var(--OCC_black); */
+}
+
+.donate-button:hover {
+  cursor: pointer;
+  background-color: var(--OCC_white);
+  transition: ease-in-out 0.4s;
+  color: var(--OCC_blue);
+  text-shadow: none;
 }
 
 @media(max-width:768px) {
@@ -404,10 +476,23 @@ a:hover:after {
   }
 }
 
+/* ************************** */
+/* Iphone 5 */
+/* ************************** */
+
+@media only screen 
+and (device-width : 320px) 
+and (device-height : 568px) 
+and (-webkit-device-pixel-ratio : 2) { 
+  .welcome {
+    font-size: 3rem;
+  }
+}
+
 
 
 /* ****************************************************************************************  */
-/* ABOUT US */
+/* ABOUT Gabi */
 /* ****************************************************************************************  */
 .about {
   width: 100%;
@@ -415,7 +500,7 @@ a:hover:after {
   display: block;
   background-color: var(--OCC_blue);
   border: 0.25rem solid white;
-  border-radius: 0.25rem;
+  border-radius: 0rem 0rem 0.25rem 0.25rem;
 }
 
 .about-title::after {
@@ -427,7 +512,7 @@ a:hover:after {
 
 .about-desc {
   text-align: center;
-  padding: 1rem 6rem 1rem 6rem;
+  padding: 1rem 10rem 1rem 10rem;
   color: var(--OCC_white);
   font-size: 1.25rem;
   margin-top: 0.5rem;
@@ -455,7 +540,7 @@ a:hover:after {
   max-width: 22.5rem;
   height: auto;
   border-radius: 50%;
-  border: 0.5rem solid var(--OCC_white);
+  border: 0.25rem solid var(--OCC_white);
   animation: fadeInRight 5s linear;
 }
 
@@ -475,8 +560,8 @@ a:hover:after {
   font-size: 1.25rem;
   font-family: var(--OCC_font_desc);
   color: var(--OCC_white);
-  line-height: 1.75rem;
-  padding: 1rem 1rem 1rem 1rem;
+  line-height: 2.15rem;
+  padding: 0rem 1rem 0rem 1rem;
 }
 
 /* ************************** */
@@ -556,7 +641,7 @@ and (-webkit-device-pixel-ratio : 3) {
 
 
 /* ****************************************************************************************  */
-/* OUR PRODUCTS */
+/* OUR PROJECTS */
 /* ****************************************************************************************  */
 .our-products {
   width: 100%;
@@ -564,13 +649,14 @@ and (-webkit-device-pixel-ratio : 3) {
   background-color: var(--OCC_blue);
   display: block;
   margin: 0 auto; 
-  border: 0.25rem solid var(--OCC_white);
-  border-radius: 0.25rem;
+  border-left: 0.25rem solid var(--OCC_white);;
+  border-right: 0.25rem solid var(--OCC_white);;
+
 }
 
 .products-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -578,98 +664,102 @@ and (-webkit-device-pixel-ratio : 3) {
 .product-header {
   text-align: center;
   font-family: var(--OCC_font_desc);
-  padding: 1rem 6rem 2rem 6rem;
+  padding: 1rem 6rem 1rem 6rem;
   color: var(--OCC_white);
   text-shadow: 2px 2px #000;
+}
+
+.stat-card {
+  display: block;
+  margin: 0 auto;
+  width: 35rem;
+  height: auto;
+  border: 0.25rem solid white;
+  border-radius: 0.25rem;
+  margin-bottom: 4rem;
+}
+
+
+
+#feedingAmerica,
+#ThurstonRegional {
+  font-family: var(--OCC_font_desc);
+  font-size: 1rem;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.stats-desc {
+  color: var(--OCC_white);
+  font-family: var(--OCC_font_desc);
+  text-align: center;
+  font-size: 1.05rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+#project-card {
+  display: flex;
+  width: 100%;
 }
 
 /* Boxes that hold data */
 .product-cards,
 .product-mini,
 .product-comics {
-  position: relative;
   overflow: visible;
   text-align: center;
-  width: 52.5%;
   height: auto;
-  border-radius: 1em;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  margin: 0rem 1rem 3rem 1rem;
+  margin: 0rem 1rem 2rem 1rem;
+  height: 32rem;
   /* background: radial-gradient(var(--clr-inner, var(--OCC_blue)) 88%, var(--clr-outer, var(--OCC_white))); */
+  border-radius: 0.25rem;
   border: 0.25rem solid var(--OCC_white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Title for types of products */
 .product-title-cards,
 .product-title-mini,
 .product-title-comics {
-  font-size: clamp(2rem, calc(5vw + 1rem), 5.5rem);
+  font-size: clamp(2rem, calc(5vw + 1rem), 3rem);
   font-family: var(--OCC_font_header);
+  padding: 1rem 1rem 0rem 1rem;
   line-height: 1;
   text-transform: uppercase;
   color: var(--OCC_white);
   text-shadow: 2px 2px #000;
-}
-
-.product-title-cards,
-.product-title-comics {
-  padding-left: 50%;
-}
-
-.product-title-mini {
-  padding-right: 40%;
+  
 }
 
 /* Description of what the products are */
 .product-description-cards,
-.product-description-comics {
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-left: 50%;
+.product-description-comics,
+.product-description-mini {
+  padding: 0.5rem 1rem 0.5rem 1rem;
   font-size: 1.15rem;
   font-family: var(--OCC_font_desc);
   color: var(--OCC_white);
 }
 
-.product-description-mini {
-  padding-top: 1rem;
-  padding-right: 50%;
-  padding-left: 1rem;
-  font-size: 1.15rem;
-  font-family: var(--OCC_font_desc);
-  color: var(--OCC_white);
+.imageHolder {
+  width: 100%;
 }
 
 /* Images for products */
-.product-image-cards,
-.product-image-mini,
-.product-image-comics {
-  position: relative;
-  height: auto;
-  max-width: 14rem;
-  max-height: 15rem;
+.project-family,
+.project-food,
+.project-books {
   display: block;
-  float: left;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  max-width: 12rem;
+  max-height: 8rem;
+  
 }
 
-.product-image-cards,
-.product-image-comics {
-  margin-left: 2rem;
-}
 
-.product-image-cards {
-  border: 1px solid black;
-  border-radius: 15px; 
-  padding: 0rem 0rem 0rem 0rem;
-}
-
-.product-image-mini {
-  position: relative;
-  float: right;
-  margin-right: 2.5rem;
-  max-height: 16rem;
-}
 
 /* ************************** */
 /* Iphone X of Our Products*/
@@ -694,18 +784,31 @@ and (-webkit-device-pixel-ratio : 3) {
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) { 
     .our-products {
-      height: 255vh;
+      height: auto;
     }
   
     .product-header {
       padding: 0.5rem 1rem 1rem 1rem;
     }
+
+    .products-container {
+      flex-direction: column;
+    }
   
+    .stat-card {
+      width: 20rem;
+      height: auto;
+    }
+
     .product-cards,
     .product-mini,
     .product-comics {
       width: 90vw;
-      height: 65vh;
+      height: auto;
+
+      margin: 0 auto;
+
+      margin-bottom: 1rem;
     }
 
     .product-image-cards,
@@ -741,14 +844,25 @@ and (-webkit-device-pixel-ratio : 3) {
 and (device-width : 375px) 
 and (device-height : 667px) 
 and (-webkit-device-pixel-ratio : 2) { 
-  .our-products {
-    height: 310vh;
+
+
+  .products-container {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    width: 20rem;
+    
   }
 
   .product-cards,
   .product-mini,
   .product-comics {
     height: 80vh;
+
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 1rem;
   }
 }
 
@@ -761,14 +875,25 @@ and (-webkit-device-pixel-ratio : 2) {
 and (device-width : 414px) 
 and (device-height : 736px) 
 and (-webkit-device-pixel-ratio : 3) { 
-  .our-products {
-    height: 300vh;
+
+
+
+  .products-container {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    width: 20rem;
   }
 
   .product-cards,
   .product-mini,
   .product-comics {
     height: 80vh;
+
+    margin: 0 auto;
+    height: auto;
+    margin-bottom: 1rem;
   }
 }
 
@@ -782,14 +907,23 @@ and (-webkit-device-pixel-ratio : 3) {
   and (device-height : 568px) 
   and (-webkit-device-pixel-ratio : 2) {
    
-    .our-products {
-      height: 360vh;
+   
+    .products-container {
+      flex-direction: column;
+    }
+  
+    .stat-card {
+      width: 18rem;
     }
   
     .product-cards,
     .product-mini,
     .product-comics {
       height: 90vh;
+
+      margin: 0 auto;
+
+      margin-bottom: 1rem;
     }
   }
 
@@ -803,7 +937,7 @@ and (-webkit-device-pixel-ratio : 3) {
   width: 100%;
   height: auto;
   border: 0.25rem solid var(--OCC_white);
-  border-radius: 0.25rem;
+  border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
 
 .gabis-kids-header {
@@ -838,7 +972,9 @@ and (-webkit-device-pixel-ratio : 3) {
 
 .gabis-kids-logo {
   border-radius: 50%;
-  border: 0.5rem solid var(--OCC_offblue);
+  border: 0.25rem solid var(--OCC_white);
+  margin: 0rem 0rem 2rem 1rem;
+  max-height: 20rem;
 }
 
 .logo-desc {
@@ -1027,20 +1163,23 @@ section h1.section-subheading {
   border: none;
   box-shadow: none;
   border-radius: 0.5rem;
+  border: 2px solid var(--OCC_white);
   padding: 1.35rem 1.8rem 1.35rem 1.8rem;
   font-size: 1rem;
-  font-family: bolder;
+  font-weight: bolder;
   font-family: var(--OCC_font_desc);
   text-transform: uppercase;
-  text-shadow: 1px 1px #000;
+  text-shadow: 2px 2px #000;
   background-color: var(--OCC_blue);
-  color: rgb(238, 238, 238);
+  color: var(--OCC_white);
 }
 
 .submit-button:hover {
   cursor: pointer;
-  color: var(--OCC_white);
+  background-color: var(--OCC_white);
   transition: ease-in-out 0.4s;
+  color: var(--OCC_blue);
+  text-shadow: none;
 }
 
 /* container for info about phone and address */
@@ -1060,7 +1199,7 @@ section h1.section-subheading {
   padding: 0.5rem 0rem 0.5rem 0rem;
   margin-right: 0.5rem;
   border-radius: 0.5rem;
-  border: 0.25rem solid var(--OCC_white);
+  border: 2px solid var(--OCC_white);
 }
 
 .address-container {
@@ -1072,7 +1211,7 @@ section h1.section-subheading {
   padding: 0.5rem 0rem 0.5rem 0rem;
   margin-left: 0.5rem;
   border-radius: 0.5rem;
-  border: 0.25rem solid var(--OCC_white);
+  border: 2px solid var(--OCC_white);
 }
 
 .fa#phone,

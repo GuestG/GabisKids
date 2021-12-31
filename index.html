@@ -5,9 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olympic Cards & Comics</title>
+    <title>Gabi's Kids</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- For Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="gabiskids_favicon.ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="gabiskids_favicon.ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="gabiskids_favicon.ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="gabiskids_favicon.ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="gabiskids_favicon.ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="gabiskids_favicon.ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="gabiskids_favicon.ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="gabiskids_favicon.ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="gabiskids_favicon.ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="gabiskids_favicon.ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="gabiskids_favicon.ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="gabiskids_favicon.ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="gabiskids_favicon.ico/favicon-16x16.png">
+    <link rel="manifest" href="gabiskids_favicon.ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="gabiskids_favicon.ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 
 <body>
@@ -16,21 +36,25 @@
 
         <header class="header">
             <nav class="navbar">
-                <img src="./assets/OCC.png" class="nav-logo" alt="" />
+                <img src="assets/GK_Logo.png" class="nav-logo" alt="" />
                 <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#products" class="nav-link">Products</a>
-                    </li>
                     <li class="nav-item">
                         <a href="#gabis-kids" class="nav-link">Gabi's Kids</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="#products" id="navbarProjects" class="nav-link">Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" id="navbarAbout" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" id="navbarContact" class="nav-link">Contact</a>
                     </li>
                 </ul>
+                <div>
+                    <a href="#eng" class="external" id="english" data-reload>In English</a>
+                    <a href="#es" class="external" id="spanish" data-reload>En Español</a>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -40,133 +64,22 @@
         </header>
 
 
-
-
         <section class="hero">
             <div class="parallax"></div>
             <div class="welcome-container">
-                <h1 class="welcome">
-                    Welcome to Gabi's!
+                <h1 class="welcome" id="intro">
+                    Welcome to Gabi's Kids!
                 </h1>
-                <!-- CHANGE HERE BELOW TO CHANGE SET NAME -->
-                <p class="welcome-info">
-                    <span class="set-title">Crimson Vow, </span>
-                    Avaliable now!
+                <p class="explaination" id="explain">
+                    Let us help you.
                 </p>
-            </div>
-
-        </section>
-
-
-
-        <section class="about" id="about">
-
-            <h2 class="section-heading">
-                About Us
-            </h2>
-
-            <hr />
-            <div class="container reveal fade-bottom">
-                <img class="about-me-photo" src="assets/OCC-Owner.jpeg" alt="" />
-            </div>
-            <div class="about-desc-container">
-                <p class="about-desc">
-                    Gabi is the owner of Olympic Cards and Comics, putting the safety and satisfaction of the customer
-                    above all else.
-                    Olympic Cards and Comics cultivates a place to gather and create new friends through your favorite
-                    games. Follow us on social media to see future events.
-                </p>
-            </div>
-
-
-            <div class="about-hours-container">
-                <p class="about-hours">
-                    Store Hours <br>
-                    Mon - Sat: 10 am - 9 pm <br>
-                    Sun: 10 am - 6 pm
-                </p>
-            </div>
-
-
-
-            <div class="about-me-photo-container">
-                <div class="grid-footer-container" id="about-me-links">
-
-                    <div class="grid-item-2">
-                        <span class="fa-stack fa-lg">
-                            <a href="http://www.twitter.com/Gabi_OCC"><i class="fa fa-twitter fa-stack-1x"></i></a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="https://www.facebook.com/OlympicCardsAndComics/"><i
-                                    class="fa fa-facebook fa-stack-1x"></i></a>
-                        </span>
-                        <span class="fa-stack fa-lg">
-                            <a href="https://www.instagram.com/gabisocc"><i class="fa fa-instagram fa-stack-1x"></i></a>
-                        </span>
-                    </div>
-
+                <div>
+                    <button class="donate-button" id="donateButton"
+                        onClick="window.location.href='https://www.paypal.com/donate/?hosted_button_id=PDNP9DTCRNEHU&fbclid=IwAR3TW1rLyBXyzJETobFzll_3PIpphhJyJlcjz-BsiHJHbiNJ-nCtSHaZD8k';">Donate</button>
                 </div>
             </div>
 
         </section>
-
-
-
-        <section class="our-products" id="products">
-
-            <h2 class="section-heading">
-                Products
-            </h2>
-
-            <hr />
-
-            <h1 class="product-header">
-                Explore our massive selection of products, from Magic: The Gathering, Pokemon, Comics, Dungeons &
-                Dragons to Warhammer 40k and more.
-            </h1>
-            <div class="products-container">
-
-                <article class="product-cards">
-                    <img src="assets/sol-ring.jpeg" alt="" class="product-image-cards">
-                    <h3 class="product-title-cards">Cards</h3>
-                    <p class="product-description-cards">
-                        We have packs and singles of all the most played trading card
-                        games from <span>Magic: The Gathering</span>,
-                        <span>Pokomon</span>,
-                        <span>Yu-Gi-Oh</span> and
-                        <span>Flesh and Blood</span>.
-                    </p>
-                </article>
-
-
-                <article class="product-mini">
-                    <img src="assets/Ultramarines.png" alt="" class="product-image-mini">
-                    <h3 class="product-title-mini">Miniatures</h3>
-                    <p class="product-description-mini">
-                        Miniatures of all shapes and sizes for
-                        <span>Dungeons & Dragons</span>,
-                        <span>Pathfinder</span> and
-                        <span>Warhammer 40k</span>. Along with
-                        paints and brushes to customize those minis!
-                    </p>
-
-                </article>
-
-
-                <article class="product-comics">
-                    <img src="assets/invincible.jpeg" alt="" class="product-image-comics">
-                    <h3 class="product-title-comics">Comics</h3>
-                    <p class="product-description-comics">
-                        <span>Comic books</span> and
-                        <span>Board Games</span> for all ages! Collectible action figures of
-                        many beloved characters found here! From Deadpool to Stars Wars!
-                    </p>
-
-                </article>
-            </div>
-
-        </section>
-
 
 
         <section class="gabis-kids" id="gabis-kids">
@@ -177,23 +90,25 @@
 
                 <hr />
 
-                <h1 class="gabis-kids-header">
-                    Providing services for kids, seniors, and vulnerable folks during the shelter in place.
+                <h1 class="gabis-kids-header" id="gabisKidsSub">
+                    Providing services for kids and vulnerable people during the shelter in place.
                 </h1>
                 <div class="complete-logo-container">
                     <div class="logo-desc-container">
-                        <p class="logo-desc">Gabi Gives back to the community as much as she possibly can.
-                            The charity provides services such as foods, haircuts and school supplies for the less
-                            fortunate.
-                            Follow Gabi's Kids on Facebook to see what events are up and coming!
+                        <p class="logo-desc" id="gabisKidslogoDesc">
+                            Gabi's kids is a charity run by the folks at
+                            Olympic Cards and Comics! Gabi's Kids provides services
+                            such as foods and school supplies for struggling people
+                            thoughout the entire year! We also Work with other charities
+                            in the Thurston county area to offer various services. It's
+                            100% donation funded, we will gladly accept any and all items to aid those
+                            who are less forunate.
+
                         </p>
                     </div>
                     <div class="logo-social-container reveal fade-bottom">
-                        <img class="gabis-kids-logo" src="assets/gabi's-kids-logo.png" alt="" />
-                        <a href="https://www.facebook.com/GabisKidsOCC/">
-                            <i class="fa fa-facebook" id="gabis-kids-social-link">
-                            </i>
-                        </a>
+                        <img class="gabis-kids-logo" src="assets/kevin.jpeg" alt="" />
+
                     </div>
                 </div>
 
@@ -201,20 +116,166 @@
             </div>
         </section>
 
+        <section class="our-products" id="products">
+
+            <h2 class="section-heading" id="projectHeadingTitle">
+                Programs
+            </h2>
+
+            <hr />
+
+            <h1 class="product-header">
+            </h1>
+
+            <div class="stat-card" id="stat-card">
+                <p class="stats-desc" id="statsDesc1">
+                    In Washington, 790,050 people are facing hunger and of them 230,440 are children. <br>
+                </p>
+                <p class="stats-desc" id="statsDesc2">
+                    According to the 2015-2019 American Community Survey 5-year estimates,
+                    10.4% of Thurston County’s population (28,660 people) lived below the
+                    federal poverty level.
+                </p>
+                <!-- <div class="resources"> -->
+                <p class="stats-desc" id="statsfrom">
+                    - According to
+
+                    <a href="https://www.feedingamerica.org/hunger-in-america/washington" class="external"
+                        id="feedingAmerica">Feeding America</a>
+
+                    & <br>
+                    <a href="https://www.trpc.org/462/Poverty" class="external" id="ThurstonRegional">Thurston Regional
+                        Planning Council</a>
+                    .
+                </p>
+                <!-- </div> -->
+            </div>
+
+
+            <div class="products-container">
+
+                <div class="container reveal fade-bottom" id="project-card">
+                    <article class="product-cards">
+                        <h3 class="product-title-cards" id="adoptAFamilyTitle">Adopt-A-Family</h3>
+                        <p class="product-description-cards" id="adoptAFamilyDesc">
+                            Our Adopt-A-Family program makes memories for familes during
+                            the holiday season. We match supporters with familes, who provide
+                            clothing, toys and other supplies for the familes we partner with.
+                            We've had over 500 families adopted to date!
+                        </p>
+                        <div class="imageHolder">
+                            <img src="assets/otherfamliy.png" alt="" class="project-family">
+                        </div>
+                    </article>
+                </div>
+
+                <div class="container reveal fade-bottom" id="project-card">
+                    <article class="product-mini">
+                        <h3 class="product-title-mini" id="schoolTitle">School Supplies</h3>
+                        <p class="product-description-mini" id="schoolDesc">
+                            No kid should go without the basics, we can provide assistance in school supplies. These
+                            range
+                            from pencils, pens, notebooks and more! We are always accepting school supplies from
+                            generous patrons
+                            throughout the year!
+                        </p>
+                        <div class="imageHolder">
+                            <img src="assets/books.png" alt="" class="project-books">
+                        </div>
+                    </article>
+                </div>
+
+                <div class="container reveal fade-bottom" id="project-card">
+                    <article class="product-comics">
+                        <h3 class="product-title-comics" id="foodTitle">Food Drives</h3>
+                        <p class="product-description-comics" id="foodDesc">
+                            Hunger affects every community, but many don't realize it. Gabi's kids aids those who are
+                            food insecure. Teaming up with Thurston County Food Bank and All Kids Win, in order to
+                            provide food programs throughout the year.
+                        </p>
+                        <div class="imageHolder">
+                            <img src="assets/foods.png" alt="" class="project-food">
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="about" id="about">
+
+            <h2 class="section-heading" id="aboutGabisTitle">
+                About Gabi
+            </h2>
+
+            <hr />
+            <div class="container reveal fade-bottom">
+                <img class="about-me-photo" src="assets/OCC-Owner.jpeg" alt="" />
+            </div>
+            <div class="about-desc-container">
+                <p class="about-desc" id="aboutDesc">
+                    Gabi is the owner of Olympic Cards and Comics, and founder of Gabi's Kids.
+                    Throughout Gabi's life, people have stepped up to aid her in during her times of adversity.
+                    The generosity and kindness others have showed her, lead to Gabi reciporcate these feelings.
+                    Realizing people in her community were suffering from even the most basic of needs. Gabi took action
+                    and created Gabi's Kids in order to aid those who are struggling, not only with food and other
+                    supplies,
+                    but with compassion and generosity like she had received.
+
+                </p>
+                <p class="about-desc" id="aboutDescFacebook">
+                    Follow Gabi's Kids on Facebook to see what events are up and coming!
+                </p>
+
+            </div>
+
+            <div class="about-hours-container">
+                <p class="about-hours" id="aboutHours">
+                    Hours
+                </p>
+
+                <p class="about-hours" id="aboutMon">
+                    Mon - Tue: 10 am - 1 pm
+                </p>
+
+                <p class="about-hours" id="aboutWeds">
+                    Weds - Sat: 6 pm - 9 pm
+                </p>
+
+                <p class="about-hours" id="aboutSun">
+                    Sun: closed
+                </p>
+
+            </div>
+
+            <div class="about-me-photo-container">
+                <div class="grid-footer-container" id="about-me-links">
+
+                    <div class="grid-item-2">
+                        <span class="fa-stack fa-lg">
+                            <a href="https://www.facebook.com/GabisKidsOCC/"><i
+                                    class="fa fa-facebook fa-stack-1x"></i></a>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
 
 
         <section class="contact" id="contact">
             <div class="contact-container">
-                <h2 class="section-heading">
+                <h2 class="section-heading" id="contactUsTitle">
                     Contact Us
                 </h2>
                 <hr />
-                <h1 class="section-subheading">
+                <h1 class="section-subheading" id="contactUsSubTitle">
                     Give us a call or find us!
                 </h1>
                 <!-- DONT FORGET TO HAVE THEM SET UP FORM SUBMIT at olympiccardsandcomics@gmail.com -->
                 <div class="contact-form-container">
-                    <form class="contact-form" id="form" method="POST" 
+                    <form class="contact-form" id="form" method="POST"
                         action="https://formsubmit.co/e231169454c6ef1a337769280ec551af">
                         <!-- honeypot -->
                         <input type="text" name="_honey" style="display: none;">
@@ -222,19 +283,18 @@
                         <!-- Disable Captcha -->
                         <input type="hidden" name="_captcha" value="false">
 
-                        <input type="hidden" name="_next" value="https://olympiccardsandcomics.com/">
-                        
-                        <input name="name" id="name" type="text" class="form-control" placeholder="Your Name *" required
-                            data-validation-required-message="Please enter your name.">
-                            
-                        <input name="email" id="email" type="email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        class="form-control" placeholder="Your Email *"
-                        required data-validation-required-message="Please enter your email address.">
-                            
+                        <input type="hidden" name="_next" value="https://GabisKids.com/">
+
+                        <input name="name" id="nametext" type="text" class="form-control" placeholder="Your Name *"
+                            required data-validation-required-message="Please enter your name.">
+
+                        <input name="email" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            class="form-control" placeholder="Your Email *" required
+                            data-validation-required-message="Please enter your email address.">
+
                         <textarea class="form-control" id="message" name="message" placeholder="Your Message *" required
                             data-validation-required-message="Please enter a message."></textarea>
-                            
+
                         <button type="submit" id="submit" class="submit-button" value="submit">Send Message</button>
 
                     </form>
@@ -243,17 +303,17 @@
                 <div class="info-container">
                     <div class="phone-container">
                         <i class="fa fa-phone" id="phone"></i>
-                        <p class="info-header-text">
+                        <p class="info-header-text" id="phoneText">
                             PHONE
                         </p>
                         <p class="info-container-text">
-                            (360) 459-7721
+                            (360) 459 - 7721
                         </p>
                     </div>
 
                     <div class="address-container">
                         <i class="fa fa-map-pin" id="pin"></i>
-                        <p class="info-header-text">
+                        <p class="info-header-text" id="addressText">
                             ADDRESS
                         </p>
                         <p class="info-container-text">
@@ -273,14 +333,7 @@
 
                 <div class="grid-item-2">
                     <span class="fa-stack fa-lg">
-                        <a href="http://www.twitter.com/Gabi_OCC"><i class="fa fa-twitter fa-stack-1x"></i></a>
-                    </span>
-                    <span class="fa-stack fa-lg">
-                        <a href="https://www.facebook.com/OlympicCardsAndComics/"><i
-                                class="fa fa-facebook fa-stack-1x"></i></a>
-                    </span>
-                    <span class="fa-stack fa-lg">
-                        <a href="https://www.instagram.com/gabisocc"><i class="fa fa-instagram fa-stack-1x"></i></a>
+                        <a href="https://www.facebook.com/GabisKidsOCC/"><i class="fa fa-facebook fa-stack-1x"></i></a>
                     </span>
                 </div>
 
@@ -292,7 +345,7 @@
 
 
     </main>
-
+    <script src="languages.js" type="text/javascript"></script>
     <script src="navbar.js" type="text/javascript"></script>
     <script src="reveal.js" type="text/javascript"></script>
 </body>
