@@ -34,11 +34,12 @@ body {
   overflow-x: hidden;
   /* CHANGE HERE BELOW TO CHANGE BACKGROUND IMAGE, 2600 version doesnt work on github pages. 
   BE SURE TO GET MOBILE VERSION OF IMAGE.*/
-  background: url("./assets/gabisKidsHero.jpeg");
+  background: url("./assets/kidFun.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  /* background-size: 100% 100%; */
   
 }
 
